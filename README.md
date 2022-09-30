@@ -1,4 +1,4 @@
-# lili.github.io
+# sunxiaobiu.github.io
 This is readme file
 
-![Li Li](/images/_lili.png)
+![Li Li](/images/Xiaoyu_sun.jpeg)
