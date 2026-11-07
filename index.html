@@ -635,38 +635,57 @@
                         src="https://www.linkedinembed.com/embed.js" async>
                 </script>
 
-
-                <!-- Visitor Globe -->
+                <!-- 2D Visitor Map -->
                 <div style="
-    height: 150px;
-    width: 150px;
-    margin-left: 28%;
-    margin-top: 10%;
+    width: 240px;
+    max-width: 100%;
+    margin: 20px auto;
+    text-align: center;
 ">
-                    <script
-                            type="text/javascript"
-                            id="mmvst_globe"
-                            src="https://mapmyvisitors.com/globe.js?d=vYgaXBx0pleXHfm8qc5aVVeoLjj37alyU_-oIfZAAxUy">
-                    </script>
+                    <a href="https://mapmyvisitors.com/web/1c9c0"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       title="View Visitor Statistics">
+
+                        <img
+                                src="https://mapmyvisitors.com/map.png?d=XTXtwukuFYmevtm8f2Fv1Gh655Ke0WwgDgQdaSaXCB8&cl=ffffff"
+                                alt="Website Visitor Map"
+                                style="width: 100%; height: auto;">
+
+                    </a>
                 </div>
 
-                <!-- Fix Globe Click URL -->
-                <script>
-                    document.addEventListener('click', function (event) {
-                        const link = event.target.closest('#mmvst_a');
+<!--                &lt;!&ndash; Visitor Globe &ndash;&gt;-->
+<!--                <div style="-->
+<!--    height: 150px;-->
+<!--    width: 150px;-->
+<!--    margin-left: 28%;-->
+<!--    margin-top: 10%;-->
+<!--">-->
+<!--                    <script-->
+<!--                            type="text/javascript"-->
+<!--                            id="mmvst_globe"-->
+<!--                            src="https://mapmyvisitors.com/globe.js?d=vYgaXBx0pleXHfm8qc5aVVeoLjj37alyU_-oIfZAAxUy">-->
+<!--                    </script>-->
+<!--                </div>-->
 
-                        if (!link) return;
+<!--                &lt;!&ndash; Fix Globe Click URL &ndash;&gt;-->
+<!--                <script>-->
+<!--                    document.addEventListener('click', function (event) {-->
+<!--                        const link = event.target.closest('#mmvst_a');-->
 
-                        event.preventDefault();
-                        event.stopImmediatePropagation();
+<!--                        if (!link) return;-->
 
-                        window.open(
-                            'https://mapmyvisitors.com/web/1c9c0',
-                            '_blank',
-                            'noopener,noreferrer'
-                        );
-                    }, true);
-                </script>
+<!--                        event.preventDefault();-->
+<!--                        event.stopImmediatePropagation();-->
+
+<!--                        window.open(-->
+<!--                            'https://mapmyvisitors.com/web/1c9c0',-->
+<!--                            '_blank',-->
+<!--                            'noopener,noreferrer'-->
+<!--                        );-->
+<!--                    }, true);-->
+<!--                </script>-->
 
             </td>
         </tr>
