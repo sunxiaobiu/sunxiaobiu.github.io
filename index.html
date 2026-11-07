@@ -652,32 +652,20 @@
 
                 <!-- Fix Globe Click URL -->
                 <script>
-                    (function () {
-                        function fixGlobeLink() {
-                            const link = document.getElementById('mmvst_a');
+                    document.addEventListener('click', function (event) {
+                        const link = event.target.closest('#mmvst_a');
 
-                            if (!link) return false;
+                        if (!link) return;
 
-                            link.href = 'https://mapmyvisitors.com/web/1c9c0';
-                            link.target = '_blank';
-                            link.rel = 'noopener noreferrer';
+                        event.preventDefault();
+                        event.stopImmediatePropagation();
 
-                            return true;
-                        }
-
-                        if (!fixGlobeLink()) {
-                            const observer = new MutationObserver(() => {
-                                if (fixGlobeLink()) {
-                                    observer.disconnect();
-                                }
-                            });
-
-                            observer.observe(document.body, {
-                                childList: true,
-                                subtree: true
-                            });
-                        }
-                    })();
+                        window.open(
+                            'https://mapmyvisitors.com/web/1c9c0',
+                            '_blank',
+                            'noopener,noreferrer'
+                        );
+                    }, true);
                 </script>
 
             </td>
