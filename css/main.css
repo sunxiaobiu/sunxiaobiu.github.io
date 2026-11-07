@@ -55,10 +55,13 @@ li {
     outline:0;
     box-shadow:none;
     padding:0;
+
+    /* Hide scrollbar but keep scrolling */
+    scrollbar-width: none;       /* Firefox, modern browsers */
+    -ms-overflow-style: none;    /* Old Edge / IE */
 }
 .news::-webkit-scrollbar-track {
-    background: transparent;
-    border: none;
+    border: none;     /* Chrome, Safari */
 }
 
 .news-list{
