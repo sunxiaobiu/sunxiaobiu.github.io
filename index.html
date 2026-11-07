@@ -636,18 +636,54 @@
                 </script>
 
 
-                <div style="height: 150px; width: 150px;margin-left:28%; margin-top: 10%">
-                    <script type="text/javascript" id="mmvst_globe" src="//mapmyvisitors.com/globe.js?d=vYgaXBx0pleXHfm8qc5aVVeoLjj37alyU_-oIfZAAxU"></script>
+                <!-- Visitor Globe -->
+                <div style="
+    height: 150px;
+    width: 150px;
+    margin-left: 28%;
+    margin-top: 10%;
+">
+                    <script
+                            type="text/javascript"
+                            id="mmvst_globe"
+                            src="https://mapmyvisitors.com/globe.js?d=vYgaXBx0pleXHfm8qc5aVVeoLjj37alyU_-oIfZAAxUy">
+                    </script>
                 </div>
+
+                <!-- Fix Globe Click URL -->
+                <script>
+                    (function () {
+                        function fixGlobeLink() {
+                            const link = document.getElementById('mmvst_a');
+
+                            if (!link) return false;
+
+                            link.href = 'https://mapmyvisitors.com/web/1c9c0';
+                            link.target = '_blank';
+                            link.rel = 'noopener noreferrer';
+
+                            return true;
+                        }
+
+                        if (!fixGlobeLink()) {
+                            const observer = new MutationObserver(() => {
+                                if (fixGlobeLink()) {
+                                    observer.disconnect();
+                                }
+                            });
+
+                            observer.observe(document.body, {
+                                childList: true,
+                                subtree: true
+                            });
+                        }
+                    })();
+                </script>
 
             </td>
         </tr>
     </table>
     </p>
-
-    <!--			<div style="height: 150px; width: 150px;margin-left: 1100px;">-->
-    <!--				<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=lCURDHS_vG2I2fEVO2pAf2DggnGO9onpY50mtMFUW2I"></script>-->
-    <!--			</div>-->
 
     <p>
         <!--        <a href="topresearcher/index.html">TopResearcher</a> |-->
